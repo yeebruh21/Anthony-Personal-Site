@@ -1,5 +1,5 @@
 .main-background {
-    background-color: rgb(97, 106, 108);
+    background-color: rgb(207, 207, 207);
 
     overflow-y: scroll;
     scroll-behavior: smooth;
@@ -18,10 +18,8 @@
 .square {
     overflow: hidden;
     position: absolute;
-    backdrop-filter: blur (5px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    background-color: rgb(207, 207, 207);
+    box-shadow: 0px 30px 25px rgba(0,0,0,0.15);
 }
 
 .square:nth-child(1) {
@@ -68,9 +66,9 @@
 }
 
 .square:nth-child(7) {
-    width: 50px;
-    height: 50px;
-    animation: animate2 120s linear infinite;
+    width: 80px;
+    height: 80px;
+    animation: animate1 120s linear infinite;
     animation-delay: calc(-1s * var(--i));
 }
 
@@ -178,8 +176,8 @@
     position: relative;
     display: flex;
     justify-content: center;
-    padding-top: 120px;
-    margin-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 80px;
 }
 
 .main-button button {
@@ -233,7 +231,8 @@
     background-color: white;
     min-width: 200px;
     min-height: 20px;
-    border: 1px solid black;
+    border: 0px;
+    border-bottom: 1px solid black;
     color: black;
     padding: 15px;
     cursor: pointer;
@@ -272,15 +271,13 @@
     cursor: pointer;
 }
 
-.about-title1 {
+.about-title {
+    width: 300px;
     position: relative;
-    font-family: 'Convergence', sans-serif;
-    text-align: center;
-    font-size: 50px;
-    color:black;
-    z-index: 1;
-    margin-top: 120px;
-    margin-bottom: 50px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    object-fit: contain;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -294,7 +291,7 @@
     margin: auto;
     width: 700px;
     height: auto;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .about-image-container {
@@ -353,7 +350,7 @@
 .skills-block h2 {
     font-family: 'Convergence', sans-serif;
     font-size: 15px;
-    color:orange;
+    color: rgb(218, 123, 14);
     display: flex;
     justify-content: center;
 
@@ -382,23 +379,23 @@
 }
 
 .skill-icon {
-    max-width: 75px;
-    max-height: 75px;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 }
 
-.exp-title1 {
+.exp-title {
+    width: 300px;
     position: relative;
-    font-family: 'Convergence', sans-serif;
-    text-align: center;
-    font-size: 50px;
-    color:black;
-    z-index: 1;
-    margin-top: 120px;
-    margin-bottom: 50px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    object-fit: contain;
+    margin-top: 220px;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -421,12 +418,13 @@
     height: 250px;
     margin-bottom: 15%;
     background: white;
-    border: 1px solid black;
     position: relative;
     margin: auto;
     padding-top: 20px;
     padding-left: 30px;
     margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 
 .exp-block h1 {
@@ -459,15 +457,14 @@
     user-select: none; /* Standard syntax */
 }
 
-.projects-title1 {
+.projects-title {
+    width: 300px;
     position: relative;
-    font-family: 'Convergence', sans-serif;
-    text-align: center;
-    font-size: 50px;
-    color:black;
-    z-index: 1;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    object-fit: contain;
     margin-top: 120px;
-    margin-bottom: 50px;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -488,9 +485,10 @@
     background: white;
     position: relative;
     width: 250px;
-    height: 400px;
+    min-height: 400px;
     margin: auto;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 
 .project-block h1 {
@@ -504,8 +502,10 @@
     user-select: none; /* Standard syntax */
 }
 
-.project-block h2 {
-    margin: 12px;
+.project-text {
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 14px;
     font-family: 'Convergence', sans-serif;
     font-size: 14px;
     color:black;
@@ -523,9 +523,20 @@
     user-select: none; /* Standard syntax */
 }
 
+.project-icon {
+    position: relative;
+    margin: 12px;
+    width: 40px;
+    height: 40px;
+}
+
+.project-icon:hover {
+    cursor: pointer;
+}
+
 .reveal {
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(30px);
     opacity: 0;
     transition: all 0.7s ease;
 }
