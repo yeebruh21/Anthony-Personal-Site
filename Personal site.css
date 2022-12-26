@@ -1,5 +1,99 @@
 .main-background {
-    background-color: rgb(97, 106, 108)
+    background-color: rgb(97, 106, 108);
+
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-snap-align: center;
+}
+
+.background-animation {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    overflow: hidden;
+    position: absolute;
+    backdrop-filter: blur (5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.square:nth-child(1) {
+    width: 100px;
+    height: 100px;
+
+    animation: animate1 60s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+.square:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    animation: animate2 150s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+.square:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    animation: animate2 120s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+.square:nth-child(4) {
+    width: 40px;
+    height: 40px;
+    animation: animate2 80s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+.square:nth-child(5) {
+    width: 80px;
+    height: 80px;
+    animation: animate1 90s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+.square:nth-child(6) {
+    width: 40px;
+    height: 40px;
+    animation: animate2 110s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+.square:nth-child(7) {
+    width: 50px;
+    height: 50px;
+    animation: animate2 120s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes animate1 {
+    0%, 100%
+    {
+        transform: translateY(-80px);
+    }
+    50%
+    {
+        transform: translateY(80px);
+    }
+}
+
+@keyframes animate2 {
+    0%, 100%
+    {
+        transform: translateY(150px);
+    }
+    50%
+    {
+        transform: translateY(-150px);
+    }
 }
 
 .main-text {
@@ -146,6 +240,10 @@
     display: block;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     z-index: 2;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .button-group button:hover {
@@ -429,7 +527,7 @@
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: all 1s ease;
+    transition: all 0.7s ease;
 }
 
 .reveal.active {
