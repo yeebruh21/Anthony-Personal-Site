@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+        <title>Contact Me</title>
+
+        <link rel = "stylesheet" href="Personal site.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Lato&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+
+    <body class = "main-background">
+        <div class = "background-animation">
+            <div class = "square" style = "--i:0;"></div>
+            <div class = "square" style = "--i:1;"></div>
+            <div class = "square" style = "--i:2;"></div>
+            <div class = "square" style = "--i:3;"></div>
+            <div class = "square" style = "--i:4;"></div>
+            <div class = "square" style = "--i:5;"></div>
+            <div class = "square" style = "--i:6;"></div>
+            <div class = "square" style = "--i:7;"></div>
+        </div>
+
+        <div class = "button-group-container">
+            <button class = "button1" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#about-me';">About Me</button>
+            <button class = "button2" onclick = "location.href='file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#experience';">Experience</button>
+            <button class = "button3" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#projects';">Projects</button>
+            <button class = "button4" >Resume</button>
+            <button class = "button5" >Chess</button>
+            <button class = "button6" >Literature</button>
+            <button class = "button7" >Time Capsule</button>
+            <button class = "button8" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Contact%20Me.html';">Contact Me</button>
+        </div>
+
+        <div class = "contact-block">
+            <h1>Contact Me</h1>
+            <contact-div>
+                <h2>agchen@uwaterloo.ca</h2>
+            </contact-div>
+            <h2>Linkedin</h2>
+            <h2>Instagram</h2>
+            <h2>Discord</h2>
+        </div>
+
+        <script type = "text/javascript">
+            window.addEventListener('scroll', reveal);
+
+            function reveal() {
+                var reveals = document.querySelectorAll('.reveal');
+
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 50;
+
+                    if (revealtop < windowheight - revealpoint) {
+                        reveals[i].classList.add('active');
+                    }
+                    else {
+                        reveals[i].classList.rem('active');
+                    }
+                }
+            }
+
+            var divs = document.getElementsByClassName('square');
+            // get window width and height
+            var winWidth = window.innerWidth;
+            var winHeight = window.innerHeight;
+
+            // i stands for "index". you could also call this banana or haircut. it's a variable
+            for ( var i=0; i < divs.length; i++ ) {
+                
+                // shortcut! the current div in the list
+                var thisDiv = divs[i];
+                
+                // get random numbers for each element
+                randomTop = getRandomNumber(0, winHeight);
+                randomLeft = getRandomNumber(0, winWidth);
+                
+                // update top and left position
+                thisDiv.style.top = randomTop +"px";
+                thisDiv.style.right = randomLeft +"px";
+                
+            }
+
+            // function that returns a random number between a min and max
+            function getRandomNumber(min, max) {
+                
+            return Math.random() * (max - min) + min;
+                
+            }
+        </script>
+    </body>
+</html>

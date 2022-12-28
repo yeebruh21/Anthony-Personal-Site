@@ -10,17 +10,27 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Lato&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".menu-button").click(function(){
+                $(".button1").removeClass("active");
+                $(this).addClass("active");
+                });
+            });
+        </script>
     </head>
 
     <body class = "main-background">
         <!-- this is how you comment btw-->
 
         <!-- button that expands menu -->
-        <!--<div class = "menu-button" onclick = "location.href = 'https://youtube.com';">
+        <div class = "menu-button" onclick = "toggleMenu()">
             <div class = "menu-button-tiles"></div>
             <div class = "menu-button-tiles"></div>
             <div class = "menu-button-tiles"></div>
-        </div>-->
+        </div>
 
         <div class = "background-animation">
             <div class = "square" style = "--i:0;"></div>
@@ -34,16 +44,14 @@
         </div>
 
         <div class = "button-group-container">
-            <button class = "button1" onclick = "location.href = '#about-me';">About Me</button>
-            <button class = "button2" onclick = "location.href='#experience';">Experience</button>
-            <button class = "button3" onclick = "location.href = '#projects';">Projects</button>
-            <button class = "button4" >Literature</button>
-            <button class = "button5" >Chess</button>
-            <button class = "button6" >Resume</button>
-            <button class = "button7" >Contact Me</button>
-            <div class = "contacts-dropdown">
-
-            </div>
+            <button class = "button1" id = "b1" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#about-me';">About Me</button>
+            <button class = "button2" id = "b2" onclick = "location.href='file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#experience';">Experience</button>
+            <button class = "button3" id = "b3" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#projects';">Projects</button>
+            <button class = "button4" id = "b4" >Resume</button>
+            <button class = "button5" id = "b5" >Chess</button>
+            <button class = "button6" id = "b6" >Literature</button>
+            <button class = "button7" id = "b7" >Time Capsule</button>
+            <button class = "button8" id = "b8" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Contact%20Me.html';">Contact Me</button>
         </div>
 
         <div class = "main-container">
@@ -65,7 +73,7 @@
         
                 <!-- double arrows pointing downwards -->
                 <div class = "down-arrows-container">
-                    <img src = "img/down_icon.png" class = "down-arrows" alt="down arrows">
+                    <img src = "img/down-arrow.png" class = "down-arrow" alt="down arrow">
                 </div>
             </div>
         </div>
@@ -201,7 +209,7 @@
 
         <div class = "main-button-container reveal">
             <div class = "main-button">
-                <button onclick = "location.href='https://google.com';">More About Me >></button>
+                <button onclick = "location.href='https://google.com';">View Resume >></button>
             </div>
         </div>
 
@@ -251,6 +259,37 @@
                 
             return Math.random() * (max - min) + min;
                 
+            }
+
+            function toggleMenu() {
+                var b1 = document.getElementById("b1");
+                var b2 = document.getElementById("b2");
+                var b3 = document.getElementById("b3");
+                var b4 = document.getElementById("b4");
+                var b5 = document.getElementById("b5");
+                var b6 = document.getElementById("b6");
+                var b7 = document.getElementById("b7");
+                var b8 = document.getElementById("b8");
+
+                if (b1.style.display === "none") {
+                    b1.style.display = "block";
+                    b2.style.display = "block";
+                    b3.style.display = "block";
+                    b4.style.display = "block";
+                    b5.style.display = "block";
+                    b6.style.display = "block";
+                    b7.style.display = "block";
+                    b8.style.display = "block";
+                } else {
+                    b1.style.display = "none";
+                    b2.style.display = "none";
+                    b3.style.display = "none";
+                    b4.style.display = "none";
+                    b5.style.display = "none";
+                    b6.style.display = "none";
+                    b7.style.display = "none";
+                    b8.style.display = "none";
+                }
             }
         </script>
     </body>
