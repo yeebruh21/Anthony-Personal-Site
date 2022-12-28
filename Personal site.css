@@ -267,8 +267,8 @@
 .button-group-container {
     position: fixed;
     float: right;
-    top: 20px;
-    right: 20px;
+    top: 50px;
+    right: 30px;
     z-index: 1;
 }
 
@@ -284,12 +284,85 @@
     color: black;
     padding: 12px;
     cursor: pointer;
-    display: none;
+    display: block;
     z-index: 2;
+    position: relative;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+}
+
+#b1 {
+    right: -230px;
+    transition: 0.2s;
+}
+
+#b1.active {
+    right: 0px;
+}
+
+#b2 {
+    right: -230px;
+    transition: 0.25s;
+}
+
+#b2.active {
+    right: 0px;
+}
+
+#b3 {
+    right: -230px;
+    transition: 0.3s;
+}
+
+#b3.active {
+    right: 0px;
+}
+
+#b4 {
+    right: -230px;
+    transition: 0.35s;
+}
+
+#b4.active {
+    right: 0px;
+}
+
+#b5 {
+    right: -230px;
+    transition: 0.4s;
+}
+
+#b5.active {
+    right: 0px;
+}
+
+#b6 {
+    right: -230px;
+    transition: 0.45s;
+}
+
+#b6.active {
+    right: 0px;
+}
+
+#b7 {
+    right: -230px;
+    transition: 0.5s;
+}
+
+#b7.active {
+    right: 0px;
+}
+
+#b8 {
+    right: -230px;
+    transition: 0.55s;
+}
+
+#b8.active {
+    right: 0px;
 }
 
 .button1::before, .button1::after {
@@ -396,7 +469,7 @@
 .button2::before {
     content: '';
     right: 0;
-    top: 49px;
+    top: 0px;
     border-top: 3px solid rgb(170, 170, 170);
     border-right: 3px solid rgb(123, 123, 123);
     transform: translate(-100%, 50%);
@@ -405,7 +478,7 @@
 .button2:after {
     content: '';
     left: 0;
-    top: 81px;
+    top: 32px;
     border-bottom: 3px solid rgb(123, 123, 123);
     border-left: 3px solid rgb(170, 170, 170);
     transform: translate(100%, -50%)
@@ -425,7 +498,7 @@
 .button3::before {
     content: '';
     right: 0;
-    top: 98px;
+    top: 0px;
     border-top: 3px solid rgb(170, 170, 170);
     border-right: 3px solid rgb(123, 123, 123);
     transform: translate(-100%, 50%);
@@ -434,7 +507,7 @@
 .button3:after {
     content: '';
     left: 0;
-    top: 130px;
+    top: 32px;
     border-bottom: 3px solid rgb(123, 123, 123);
     border-left: 3px solid rgb(170, 170, 170);
     transform: translate(100%, -50%)
@@ -454,7 +527,7 @@
 .button4::before {
     content: '';
     right: 0;
-    top: 147px;
+    top: 0px;
     border-top: 3px solid rgb(170, 170, 170);
     border-right: 3px solid rgb(123, 123, 123);
     transform: translate(-100%, 50%);
@@ -463,7 +536,7 @@
 .button4:after {
     content: '';
     left: 0;
-    top: 179px;
+    top: 32px;
     border-bottom: 3px solid rgb(123, 123, 123);
     border-left: 3px solid rgb(170, 170, 170);
     transform: translate(100%, -50%)
@@ -483,7 +556,7 @@
 .button5::before {
     content: '';
     right: 0;
-    top: 196px;
+    top: 0px;
     border-top: 3px solid rgb(170, 170, 170);
     border-right: 3px solid rgb(123, 123, 123);
     transform: translate(-100%, 50%);
@@ -492,7 +565,7 @@
 .button5:after {
     content: '';
     left: 0;
-    top: 228px;
+    top: 32px;
     border-bottom: 3px solid rgb(123, 123, 123);
     border-left: 3px solid rgb(170, 170, 170);
     transform: translate(100%, -50%)
@@ -512,7 +585,7 @@
 .button6::before {
     content: '';
     right: 0;
-    top: 245px;
+    top: 0px;
     border-top: 3px solid rgb(170, 170, 170);
     border-right: 3px solid rgb(123, 123, 123);
     transform: translate(-100%, 50%);
@@ -521,7 +594,7 @@
 .button6:after {
     content: '';
     left: 0;
-    top: 277px;
+    top: 32px;
     border-bottom: 3px solid rgb(123, 123, 123);
     border-left: 3px solid rgb(170, 170, 170);
     transform: translate(100%, -50%)
@@ -541,7 +614,7 @@
 .button7::before {
     content: '';
     right: 0;
-    top: 294px;
+    top: 0px;
     border-top: 3px solid rgb(170, 170, 170);
     border-right: 3px solid rgb(123, 123, 123);
     transform: translate(-100%, 50%);
@@ -550,7 +623,7 @@
 .button7:after {
     content: '';
     left: 0;
-    top: 326px;
+    top: 32px;
     border-bottom: 3px solid rgb(123, 123, 123);
     border-left: 3px solid rgb(170, 170, 170);
     transform: translate(100%, -50%)
@@ -570,7 +643,7 @@
 .button8::before {
     content: '';
     right: 0;
-    top: 343px;
+    top: 0px;
     border-top: 3px solid rgb(170, 170, 170);
     border-right: 3px solid rgb(123, 123, 123);
     transform: translate(-100%, 50%);
@@ -579,7 +652,7 @@
 .button8:after {
     content: '';
     left: 0;
-    top: 375px;
+    top: 32px;
     border-bottom: 3px solid rgb(123, 123, 123);
     border-left: 3px solid rgb(170, 170, 170);
     transform: translate(100%, -50%)
@@ -596,26 +669,56 @@
     transition: all .35s ease;
 }
 
-.menu-button {
-    position: relative;
+.menu-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger {
+    position: fixed;
+    display: none;
     float: right;
-    top: 30px;
-    right: 40px;
-}
-
-.menu-button-tiles {
-    width: 45px;
-    height: 10px;
-    background: black;
-    margin: 6px 0;
-}
-
-.menu-button:hover .menu-button-tiles {
-    box-sizing: border-box;
-    border: 2px solid black;
-    background-color: white;
     cursor: pointer;
+    top: 30px;
+    right: 30px;
+    z-index: 2;
 }
+
+.bar {
+    display: none;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+    .bar {
+        display: block;
+    }
+    .button-group-container {
+        top: 80px;
+    }
+}
+
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
 
 .about-title {
     width: 300px;
@@ -896,11 +999,6 @@
     opacity: 1;
 }
 
-
-@media (max-width: 900px) {
-    
-}
-
 .contact-block {
     position: relative;
     display: flex;
@@ -908,7 +1006,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 19%;
+    margin-top: 180px;
 }
 
 .contact-block h1 {

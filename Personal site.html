@@ -12,24 +12,29 @@
         <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Lato&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $(".menu-button").click(function(){
-                $(".button1").removeClass("active");
-                $(this).addClass("active");
-                });
-            });
-        </script>
     </head>
 
     <body class = "main-background">
         <!-- this is how you comment btw-->
 
-        <!-- button that expands menu -->
-        <div class = "menu-button" onclick = "toggleMenu()">
-            <div class = "menu-button-tiles"></div>
-            <div class = "menu-button-tiles"></div>
-            <div class = "menu-button-tiles"></div>
+        <div class = "menu-container">
+            <!-- button that expands menu -->
+            <div class = "hamburger" onclick = "toggle()">
+                <span class = "bar"></span>
+                <span class = "bar"></span>
+                <span class = "bar"></span>
+            </div>
+            
+            <div class = "button-group-container">
+                <button class = "button1" id = "b1" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#home';">Home</button>
+                <button class = "button2" id = "b2" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#about-me';">About Me</button>
+                <button class = "button3" id = "b3" onclick = "location.href='file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#experience';">Experience</button>
+                <button class = "button4" id = "b4" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#projects';">Projects</button>
+                <button class = "button5" id = "b5" >Resume</button>
+                <button class = "button6" id = "b6" >Chess</button>
+                <button class = "button7" id = "b7" >Literature</button>
+                <button class = "button8" id = "b8" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Contact%20Me.html';">Contact Me</button>
+            </div>
         </div>
 
         <div class = "background-animation">
@@ -43,18 +48,7 @@
             <div class = "square" style = "--i:7;"></div>
         </div>
 
-        <div class = "button-group-container">
-            <button class = "button1" id = "b1" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#about-me';">About Me</button>
-            <button class = "button2" id = "b2" onclick = "location.href='file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#experience';">Experience</button>
-            <button class = "button3" id = "b3" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#projects';">Projects</button>
-            <button class = "button4" id = "b4" >Resume</button>
-            <button class = "button5" id = "b5" >Chess</button>
-            <button class = "button6" id = "b6" >Literature</button>
-            <button class = "button7" id = "b7" >Time Capsule</button>
-            <button class = "button8" id = "b8" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Contact%20Me.html';">Contact Me</button>
-        </div>
-
-        <div class = "main-container">
+        <div class = "main-container" id = "home">
             <!-- add pic here -->
             <img src = "img/placeholder.jpg" class = "main-picture" alt = "self pic">
 
@@ -238,6 +232,17 @@
             var winWidth = window.innerWidth;
             var winHeight = window.innerHeight;
 
+            if (winWidth > 600) {
+                document.getElementById('b1').classList.toggle('active');
+                document.getElementById('b2').classList.toggle('active');
+                document.getElementById('b3').classList.toggle('active');
+                document.getElementById('b4').classList.toggle('active');
+                document.getElementById('b5').classList.toggle('active');
+                document.getElementById('b6').classList.toggle('active');
+                document.getElementById('b7').classList.toggle('active');
+                document.getElementById('b8').classList.toggle('active');
+            }
+
             // i stands for "index". you could also call this banana or haircut. it's a variable
             for ( var i=0; i < divs.length; i++ ) {
                 
@@ -261,36 +266,22 @@
                 
             }
 
-            function toggleMenu() {
-                var b1 = document.getElementById("b1");
-                var b2 = document.getElementById("b2");
-                var b3 = document.getElementById("b3");
-                var b4 = document.getElementById("b4");
-                var b5 = document.getElementById("b5");
-                var b6 = document.getElementById("b6");
-                var b7 = document.getElementById("b7");
-                var b8 = document.getElementById("b8");
-
-                if (b1.style.display === "none") {
-                    b1.style.display = "block";
-                    b2.style.display = "block";
-                    b3.style.display = "block";
-                    b4.style.display = "block";
-                    b5.style.display = "block";
-                    b6.style.display = "block";
-                    b7.style.display = "block";
-                    b8.style.display = "block";
-                } else {
-                    b1.style.display = "none";
-                    b2.style.display = "none";
-                    b3.style.display = "none";
-                    b4.style.display = "none";
-                    b5.style.display = "none";
-                    b6.style.display = "none";
-                    b7.style.display = "none";
-                    b8.style.display = "none";
-                }
+            function toggle() {
+                document.getElementById('b1').classList.toggle('active');
+                document.getElementById('b2').classList.toggle('active');
+                document.getElementById('b3').classList.toggle('active');
+                document.getElementById('b4').classList.toggle('active');
+                document.getElementById('b5').classList.toggle('active');
+                document.getElementById('b6').classList.toggle('active');
+                document.getElementById('b7').classList.toggle('active');
+                document.getElementById('b8').classList.toggle('active');
             }
+
+            const hamburger = document.querySelector(".hamburger");
+
+            hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("open");
+            })
         </script>
     </body>
 </html>
