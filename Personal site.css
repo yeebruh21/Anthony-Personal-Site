@@ -673,6 +673,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    z-index: 99;
 }
 
 .hamburger {
@@ -999,24 +1000,30 @@
     opacity: 1;
 }
 
-.contact-block {
+.contact-title {
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 180px;
-}
-
-.contact-block h1 {
     font-family: 'Titillium Web';
     font-size: 40px;
     color:black;
+    margin-bottom: 40px;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+}
+
+.contact-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin: auto;
+    width: 200px;
+    margin-top: 220px;
+    line-height: 18px;
 }
 
 .contact-block h2 {
@@ -1025,18 +1032,72 @@
     color: black;
 }
 
+.contact-block h2:hover {
+    color: rgb(192, 145, 46);
+    transition: 0.1s;
+}
+
 .contact-div {
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
+    align-items: center;
 }
 
 .contact-icon {
-    width: 75px;
-    height: 75px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
+    margin-right: 18px;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+}
+
+.contact-div:hover {
+    cursor: pointer;
+}
+
+.resume-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 750px;
+    height: 1000px;
+    z-index: 1;
+}
+
+.resume-container h1 {
+    font-family: 'Titillium Web';
+    font-size: 16px;
+}
+
+.resume-container h1:hover {
+    cursor: pointer;
+    color: rgb(192, 145, 46);
+    transition: 0.1s;
+}
+
+.resume-title {
+    font-family: 'Convergence', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color:black;
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
+    margin-top: 130px;
+    margin-bottom: 50px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.resume-pdf {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
 }
