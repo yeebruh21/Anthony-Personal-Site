@@ -78,6 +78,17 @@
             var winWidth = window.innerWidth;
             var winHeight = window.innerHeight;
 
+            if (winWidth > 600) {
+                document.getElementById('b1').classList.toggle('active');
+                document.getElementById('b2').classList.toggle('active');
+                document.getElementById('b3').classList.toggle('active');
+                document.getElementById('b4').classList.toggle('active');
+                document.getElementById('b5').classList.toggle('active');
+                document.getElementById('b6').classList.toggle('active');
+                document.getElementById('b7').classList.toggle('active');
+                document.getElementById('b8').classList.toggle('active');
+            }
+
             // i stands for "index". you could also call this banana or haircut. it's a variable
             for ( var i=0; i < divs.length; i++ ) {
                 
