@@ -37,8 +37,8 @@
                 <button class = "button3" id = "b3" onclick = "location.href='file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#experience';">Experience</button>
                 <button class = "button4" id = "b4" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Personal%20site.html#projects';">Projects</button>
                 <button class = "button5" id = "b5" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Resume.html';">Resume</button>
-                <button class = "button6" id = "b6" >Chess</button>
-                <button class = "button7" id = "b7" >Literature</button>
+                <button class = "button6" id = "b6" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Chess.html';">Chess</button>
+                <button class = "button7" id = "b7" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Literature.html';">Literature</button>
                 <button class = "button8" id = "b8" onclick = "location.href = 'file:///C:/Users/achen/OneDrive/Desktop/Web%20dev/Contact%20Me.html';">Contact Me</button>
             </div>
         </div>
@@ -65,83 +65,6 @@
             </div>
         </div>
 
-        <script type = "text/javascript">
-            window.addEventListener('scroll', reveal);
-
-            function reveal() {
-                var reveals = document.querySelectorAll('.reveal');
-
-                for (var i = 0; i < reveals.length; i++) {
-                    var windowheight = window.innerHeight;
-                    var revealtop = reveals[i].getBoundingClientRect().top;
-                    var revealpoint = 50;
-
-                    if (revealtop < windowheight - revealpoint) {
-                        reveals[i].classList.add('active');
-                    }
-                    else {
-                        reveals[i].classList.rem('active');
-                    }
-                }
-            }
-
-            var divs = document.getElementsByClassName('square');
-            // get window width and height
-            var winWidth = window.innerWidth;
-            var winHeight = window.innerHeight;
-
-            if (winWidth > 600) {
-                document.getElementById('b1').classList.toggle('active');
-                document.getElementById('b2').classList.toggle('active');
-                document.getElementById('b3').classList.toggle('active');
-                document.getElementById('b4').classList.toggle('active');
-                document.getElementById('b5').classList.toggle('active');
-                document.getElementById('b6').classList.toggle('active');
-                document.getElementById('b7').classList.toggle('active');
-                document.getElementById('b8').classList.toggle('active');
-            }
-
-            // i stands for "index". you could also call this banana or haircut. it's a variable
-            for ( var i=0; i < divs.length; i++ ) {
-                
-                // shortcut! the current div in the list
-                var thisDiv = divs[i];
-                
-                // get random numbers for each element
-                randomTop = getRandomNumber(0, winHeight);
-                randomLeft = getRandomNumber(0, winWidth);
-                
-                // update top and left position
-                thisDiv.style.top = randomTop +"px";
-                thisDiv.style.right = randomLeft +"px";
-                
-            }
-
-            // function that returns a random number between a min and max
-            function getRandomNumber(min, max) {
-                
-            return Math.random() * (max - min) + min;
-                
-            }            
-
-            function toggle() {
-                document.getElementById('b1').classList.toggle('active');
-                document.getElementById('b2').classList.toggle('active');
-                document.getElementById('b3').classList.toggle('active');
-                document.getElementById('b4').classList.toggle('active');
-                document.getElementById('b5').classList.toggle('active');
-                document.getElementById('b6').classList.toggle('active');
-                document.getElementById('b7').classList.toggle('active');
-                document.getElementById('b8').classList.toggle('active');
-
-                
-            }
-
-            const hamburger = document.querySelector(".hamburger");
-
-            hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("open");
-            })
-        </script>
+        <script src = "Personal site.js"></script>
     </body>
 </html>
