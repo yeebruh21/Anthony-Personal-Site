@@ -1106,14 +1106,6 @@
     margin-bottom: 30px;
 }
 
-.chess-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-}
-
 .chess-title {
     font-family: 'Convergence', sans-serif;
     text-align: center;
@@ -1121,9 +1113,64 @@
     color:black;
     text-shadow: 2px 2px rgba(0,0,0,0.2);
     margin-top: 70px;
+    margin-bottom: 70px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.chess-container1 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+
+.chess-text1 {
+
+}
+
+.highlight-game {
+
+}
+
+.chess-subtitle {
+    font-family: 'Convergence', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    color:black;
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
+    margin-top: 20px;
     margin-bottom: 30px;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+}
+
+.chart {
+    position: relative;
+    width: 600px !important;
+    height: 500px !important;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    color: rgb(129, 171, 169);
+}
+
+.chess-container2 {
+
+}
+
+.improvement-log {
+
+}
+
+.chess-text2 {
+
 }
