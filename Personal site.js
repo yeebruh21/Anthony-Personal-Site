@@ -74,79 +74,223 @@ hamburger.addEventListener("click", () => {
 hamburger.classList.toggle("open");
 })
 
-getData();
+getRapid();
+getBlitz();
+getBullet();
     
-            async function getData() {
-                const response = await fetch(
-    'https://lichess.org/api/user/yeebruh21/rating-history');
-                console.log(response);
-                const data = await response.json();
-                console.log(data);
-                length = data[2].points.length;
-                console.log(length);
+async function getRapid() {
+    const response = await fetch(
+'https://lichess.org/api/user/yeebruh21/rating-history');
+    console.log(response);
+    const data = await response.json();
+    console.log(data);
+    length = data[2].points.length;
+    console.log(length);
     
-                labels = [];
-                values = [];
-                for (i = 0; i < length; i++) {
-                    labels.push(data[2].points[i][0] + "-" + (data[2].points[i][1]+1) + "-" + data[2].points[i][2]);
-                    values.push(data[2].points[i][3]);
+    labels = [];
+    values = [];
+    for (i = 0; i < length; i++) {
+        labels.push(data[2].points[i][0] + "-" + (data[2].points[i][1]+1) + "-" + data[2].points[i][2]);
+        values.push(data[2].points[i][3]);
+    }
+    
+    new Chart(document.getElementById("line-chart1"), {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: "Rating",
+                    data: values,
+                    borderColor: '#5bb0ad',
+                    backgroundColor: 'rgba(129, 171, 169, 0.2)'
                 }
-    
-                new Chart(document.getElementById("line-chart"), {
-                    type: 'line',
-                    data: {
-                        labels: labels,
-                        datasets: [
-                            {
-                                label: "Rating",
-                                data: values,
-                                borderColor: '#5bb0ad',
-                                backgroundColor: 'rgba(129, 171, 169, 0.2)'
-                            }
-                        ]
-                    },
-                    options: {
-                        legend: { 
-                            display: false,
-                            labels: {
-                                fontSize: 22
-                            }
-                        },
-                        title: {
-                            display: true
-                        },
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    fontSize: 25
-                                }
-                            }],
-                            xAxes: [{
-                                ticks: {
-                                    fontSize: 20
-                                }
-                            }]
-                        },
-                        elements: {
-                            point: {
-                                radius: 1,
-                                hitRadius: 4
-                            }
-                        }
+            ]
+        },
+        options: {
+            legend: { 
+                display: false,
+                labels: {
+                    fontSize: 18
+                }
+            },
+            title: {
+                display: true,
+                text: 'Rapid Rating (Lichess)',
+                fontSize: 16,
+                fontColor: "black"
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        fontSize: 15,
+                        fontColor: "black"
                     }
-                });
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: 14,
+                        fontColor: "black"
+                    }
+                }]
+            },
+            elements: {
+                point: {
+                    radius: 1,
+                    hitRadius: 4
+                }
+            }
+        }
+    });
     
-            }
+}
 
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var myObj = JSON.parse(this.responseText);
-                document.getElementById("user").innerHTML = myObj.id;
-                document.getElementById("blitz-rating").innerHTML = myObj.perfs.blitz.rating;
-                document.getElementById("rapid-rating").innerHTML = myObj.perfs.rapid.rating;
-                document.getElementById("total-blitz").innerHTML = "Games: " + myObj.perfs.blitz.games;
+async function getBlitz() {
+    const response = await fetch(
+'https://lichess.org/api/user/yeebruh21/rating-history');
+    console.log(response);
+    const data = await response.json();
+    console.log(data);
+    length = data[1].points.length;
+    console.log(length);
+    
+    labels = [];
+    values = [];
+    for (i = 0; i < length; i++) {
+        labels.push(data[1].points[i][0] + "-" + (data[1].points[i][1]+1) + "-" + data[1].points[i][2]);
+        values.push(data[1].points[i][3]);
+    }
+    
+    new Chart(document.getElementById("line-chart2"), {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: "Rating",
+                    data: values,
+                    borderColor: '#f29c06',
+                    backgroundColor: 'rgba(216, 143, 18, 0.2)'
+                }
+            ]
+        },
+        options: {
+            legend: { 
+                display: false,
+                labels: {
+                    fontSize: 18
+                }
+            },
+            title: {
+                display: true,
+                text: 'Blitz Rating (Lichess)',
+                fontSize: 16,
+                fontColor: "black"
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        fontSize: 15,
+                        fontColor: "black"
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: 14,
+                        fontColor: "black"
+                    }
+                }]
+            },
+            elements: {
+                point: {
+                    radius: 1,
+                    hitRadius: 4
+                }
             }
-            };
-            xmlhttp.open("GET", "https://lichess.org/api/user/yeebruh21");
-            xmlhttp.send();
+        }
+    });
+    
+}
+
+async function getBullet() {
+    const response = await fetch(
+'https://lichess.org/api/user/yeebruh21/rating-history');
+    console.log(response);
+    const data = await response.json();
+    console.log(data);
+    length = data[0].points.length;
+    console.log(length);
+    
+    labels = [];
+    values = [];
+    for (i = 0; i < length; i++) {
+        labels.push(data[0].points[i][0] + "-" + (data[0].points[i][1]+1) + "-" + data[0].points[i][2]);
+        values.push(data[0].points[i][3]);
+    }
+    
+    new Chart(document.getElementById("line-chart3"), {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: "Rating",
+                    data: values,
+                    borderColor: '#ef3232',
+                    backgroundColor: 'rgba(224, 85, 85, 0.2)'
+                }
+            ]
+        },
+        options: {
+            legend: { 
+                display: false,
+                labels: {
+                    fontSize: 18
+                }
+            },
+            title: {
+                display: true,
+                text: 'Bullet Rating (Lichess)',
+                fontSize: 16,
+                fontColor: "black"
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        fontSize: 15,
+                        fontColor: "black"
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: 14,
+                        fontColor: "black"
+                    }
+                }]
+            },
+            elements: {
+                point: {
+                    radius: 1,
+                    hitRadius: 4
+                }
+            }
+        }
+    });
+    
+}
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("user").innerHTML = myObj.id;
+    document.getElementById("blitz-rating").innerHTML = myObj.perfs.blitz.rating;
+    document.getElementById("rapid-rating").innerHTML = myObj.perfs.rapid.rating;
+    document.getElementById("total-blitz").innerHTML = "Games: " + myObj.perfs.blitz.games;
+}
+};
+xmlhttp.open("GET", "https://lichess.org/api/user/yeebruh21");
+xmlhttp.send();
+
+// highlight game
+window.addEventListener("message",e=>{e['data']&&"9804765"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+30}px`)});
