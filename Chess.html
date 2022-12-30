@@ -15,6 +15,9 @@
     </head>
 
     <body class = "main-background">
+        <img src = "img/bishop.svg" class = "bishop"/>
+        <img src = "img/rook.svg" class = "rook"/>
+        
         <div class = "background-animation">
             <div class = "square" style = "--i:0;"></div>
             <div class = "square" style = "--i:1;"></div>
@@ -63,8 +66,11 @@
             </div>
         </div>
 
-        <div class = "chess-subtitle">
-            Live Tracking<br>
+        <div class = "chess-container2">
+            <img src = "img/queen.svg" class = "queen"/>
+            <div class = "chess-subtitle">
+                Live Tracking<br>
+            </div>
         </div>
 
         <div class = "slider-wrapper">
@@ -84,26 +90,19 @@
         </div>
 
         <!--bottom portion-->
-        <div class = "stats-container">
+        <div class = "stats-container reveal">
             <div class = "chess-text2">
                 <p id = "world-rank"></p>
+                <p id = "percentile"></p>
                 <p id = "total-wins"></p>
                 <p id = "total-losses"></p>
-                <p># of Alt Accounts: 11</p>
-                <p>Games Lost to Brother: 518</p>
-
-                <p id = "user"></p>
-                <p id = "blitz-rating"></p>
-                <p id = "rapid-rating"></p>
-                <p id = "total-blitz"></p>
-                <p id = "user2"></p>
-                <p id = "blitz-rating2"></p>
-                <p id = "rapid-rating2"></p>
-                <p id = "total-blitz2"></p>
+                <p id = "lost-bro"></p>
             </div>
 
             <div class = "improvement-log">
-
+                <h1>Improvement Log</h1>
+                <h2>[2022-12-30] - D4-B3 consistent blitz opening<br></h2>
+                <h2>[2022-12-29] - During winning streak, actively maintain drive to win<br></h2>
             </div>
         </div>
 

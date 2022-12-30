@@ -298,9 +298,20 @@ xmlhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
     document.getElementById("world-rank").innerHTML = "World Rank (Rapid): " + myObj.rank;
+    document.getElementById("percentile").innerHTML = "Percentile: " + myObj.percentile + "th";
 }
 };
 xmlhttp.open("GET", "https://lichess.org/api/user/yeebruh21/perf/rapid");
+xmlhttp.send();
+
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+    var myObj3 = JSON.parse(this.responseText);
+    document.getElementById("lost-bro").innerHTML = "Games Lost to Brother: " + (myObj3.users.needsforspeed + 340);
+}
+};
+xmlhttp.open("GET", "https://lichess.org/api/crosstable/yeebruh21/needsforspeed");
 xmlhttp.send();
 
 // highlight game
