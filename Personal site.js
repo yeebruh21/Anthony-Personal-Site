@@ -279,17 +279,28 @@ async function getBullet() {
     
 }
 
+var totalLosses = 1416 + 84;
+var totalWins = 2317 + 156;
+
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
-    document.getElementById("user").innerHTML = myObj.id;
-    document.getElementById("blitz-rating").innerHTML = myObj.perfs.blitz.rating;
-    document.getElementById("rapid-rating").innerHTML = myObj.perfs.rapid.rating;
-    document.getElementById("total-blitz").innerHTML = "Games: " + myObj.perfs.blitz.games;
+    document.getElementById("total-wins").innerHTML = "Total Win Count: " + (myObj.count.win + totalWins);
+    document.getElementById("total-losses").innerHTML = "Total Loss Count: " + (myObj.count.loss + totalLosses);
 }
 };
 xmlhttp.open("GET", "https://lichess.org/api/user/yeebruh21");
+xmlhttp.send();
+
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("world-rank").innerHTML = "World Rank (Rapid): " + myObj.rank;
+}
+};
+xmlhttp.open("GET", "https://lichess.org/api/user/yeebruh21/perf/rapid");
 xmlhttp.send();
 
 // highlight game
