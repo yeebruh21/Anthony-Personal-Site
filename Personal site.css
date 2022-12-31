@@ -1311,14 +1311,6 @@
     user-select: none; /* Standard syntax */
 }
 
-.chess-timeline {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 120px;
-    left: 150px;
-}
-
 .bishop {
     position: absolute;
     width: 65px;
@@ -1328,6 +1320,17 @@
     left: 280px;
     z-index: 2;
     transform: rotate(-15deg);
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.bishop:hover {
+    width: 68px;
+    height: 68px;
+    transition: 0.4s ease-out;
+    cursor: pointer;
 }
 
 .rook {
@@ -1339,6 +1342,17 @@
     right: 300px;
     z-index: 2;
     transform: rotate(5deg);
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.rook:hover {
+    width: 68px;
+    height: 68px;
+    transition: 0.4s ease-out;
+    cursor: pointer;
 }
 
 .queen {
@@ -1347,14 +1361,17 @@
     height: 65px;
     z-index: 2;
     margin-right: 5px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .queen:hover {
-    width: 70px;
-    height: 70px;
-    transform: translateX(-2.5px);
-    transition: 0.4s;
-    transition-timing-function: ease;
+    width: 68px;
+    height: 68px;
+    transform: translateX(-1.5px);
+    transition: all 0.4s ease-in-out;
     cursor: pointer;
 }
 
@@ -1364,4 +1381,55 @@
     flex-direction: row;
     margin: auto;
     justify-content: center;
+}
+
+.blog-title {
+    position: relative;
+    font-family: 'Convergence', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color:black;
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
+    margin-top: 70px;
+    margin-bottom: 30px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    position: relative;
+}
+
+.blog-subtitle {
+    font-family: 'Titillium Web';
+    text-align: left;
+    font-size: 28px;
+    color:black;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.blog-subtitle:hover {
+    cursor: pointer;
+}
+
+.blog-date {
+    font-family: 'Titillium Web';
+    text-align: left;
+    font-size: 18px;
+    color:black;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
