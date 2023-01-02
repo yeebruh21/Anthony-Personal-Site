@@ -123,6 +123,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -143,6 +144,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -156,6 +158,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -171,6 +174,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -203,6 +207,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -253,6 +258,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -290,6 +296,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -731,6 +738,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -754,6 +762,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -776,6 +785,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -791,6 +801,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -817,6 +828,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -829,6 +841,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -858,6 +871,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -872,6 +886,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -883,6 +898,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -904,9 +920,11 @@
     font-family: 'Titillium Web';
     font-size: 24px;
     color:black;
+    margin-top: 5px;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -917,6 +935,20 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
+    user-select: none; /* Standard syntax */
+}
+
+.exp-block h3 {
+    font-family: 'Titillium Web';
+    font-size: 14px;
+    color:black;
+    font-weight: normal;
+    margin-top: -10px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -929,6 +961,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -943,6 +976,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -952,6 +986,16 @@
     flex-direction: row;
     margin: auto;
     width: 930px;
+    height: auto;
+    margin-bottom: 70px;
+}
+
+.project-row2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width:620px;
     height: auto;
     margin-bottom: 70px;
 }
@@ -974,6 +1018,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -984,32 +1029,82 @@
     font-family: 'Titillium Web';
     font-size: 14px;
     color:black;
+    margin-left: 25px;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
 .project-image {
-    max-width: 100%;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
+}
+
+.project-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.devpost-icon {
+    position: relative;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: 8px;
+    width: 50px;
+    height: 50px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
+    user-select: none; /* Standard syntax */
+}
+
+.devpost-icon:hover {
+    cursor: pointer;
 }
 
 .github-icon {
     position: relative;
-    margin: 12px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: 12px;
     width: 40px;
     height: 40px;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
 .github-icon:hover {
+    cursor: pointer;
+}
+
+.link-icon {
+    position: relative;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: 12px;
+    width: 40px;
+    height: 40px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
+    user-select: none; /* Standard syntax */
+}
+
+.link-icon:hover {
     cursor: pointer;
 }
 
@@ -1036,6 +1131,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1078,6 +1174,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1102,6 +1199,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1122,6 +1220,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1143,6 +1242,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1166,6 +1266,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1179,6 +1280,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1202,6 +1304,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1217,6 +1320,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1230,6 +1334,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1242,6 +1347,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1307,6 +1413,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1319,6 +1426,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1334,6 +1442,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1349,6 +1458,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1371,6 +1481,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1390,6 +1501,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1421,6 +1533,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1434,6 +1547,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1456,6 +1570,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1473,6 +1588,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1494,6 +1610,7 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
 
@@ -1505,5 +1622,6 @@
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
+    -moz-user-select: none; /* Mozilla Firefox */
     user-select: none; /* Standard syntax */
 }
