@@ -23,7 +23,7 @@ var divs = document.getElementsByClassName('square');
 var winWidth = window.innerWidth;
 var winHeight = window.innerHeight;
 
-if (winWidth > 600) {
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     document.getElementById('b1').classList.toggle('active');
     document.getElementById('b2').classList.toggle('active');
     document.getElementById('b3').classList.toggle('active');
