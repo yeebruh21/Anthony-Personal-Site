@@ -308,7 +308,7 @@ xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
     var myObj3 = JSON.parse(this.responseText);
-    document.getElementById("lost-bro").innerHTML = "Games Lost to Brother: " + (myObj3.users.needsforspeed + 340);
+    document.getElementById("lost-bro").innerHTML = "Games Lost to Brother: " + (myObj3.users.needsforspeed + 341);
 }
 };
 xmlhttp.open("GET", "https://lichess.org/api/crosstable/yeebruh21/needsforspeed");
