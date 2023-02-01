@@ -1785,7 +1785,7 @@
     .main-container {
         display: flex;
         position: relative;
-        flex-direction: column;
+        flex-direction: row;
         width: 900px;
         margin: auto;
     }
