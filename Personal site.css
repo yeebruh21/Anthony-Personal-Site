@@ -98,6 +98,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    width: 300px;
     margin-top: 24%;
     margin-left: 10%;
 }
@@ -125,8 +126,6 @@
     fill: grey;
     stroke-width: 3;
     stroke: black;
-    margin-top: 5%;
-    margin-left: 10%;
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -138,6 +137,20 @@
     content: "";
     display: block;
     padding-bottom: 100%;
+}
+
+.picture-display {
+    position: relative;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.picture-cover {
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(rgba(207, 207, 207, 0), rgb(207, 207, 207));
 }
 
 @keyframes change {
